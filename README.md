@@ -10,3 +10,6 @@ DS_detect.m 是对QRS波进行检测 参考https://blog.csdn.net/qq_15746879/art
 splitBeat.m 是采用250点进行心拍截取 参考https://blog.csdn.net/qq_15746879/article/details/80365692
 
 classification-SVM.m 使用的是传统的特征工程（小波变换）+SVM 分类器
+
+Classification-DL_CNN.py 可以画出训练误差图
+Classification-DL_CNN.py 可以对数据训练预测，混淆矩阵
