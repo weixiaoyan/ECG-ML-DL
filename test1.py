@@ -58,7 +58,7 @@ for id in id_list:
 
 print(len(label))
 print(len(data1))
-print(len(data2))
+#print(len(data2))
 Nofnumber=label.count('(N')
 AFofnumber=label.count('(AFIB')
 Jofnumber=label.count('(J')
@@ -79,7 +79,7 @@ for index,value in enumerate(label):
                 label[index]=3
 
 label= keras.utils.to_categorical(label)
-print(label)
+#print(label)
 
 # 存储为mat文件
 import scipy.io
@@ -100,10 +100,11 @@ def data_slice(data, label, length):
         #data=data[i].tolist()
         for j in range(1,m+1):
             slice_data.append(data[(j-1)*length:j*length])
-        slice_label.append(m*label[i])
+            slice_label.append(label[i],)
     return slice_data,slice_label
 
 
 length = 10000
-slice, label = data_slice(data1, label, length)
-print(len(slice))
+slice_data, slice_label = data_slice(data1, label, length)
+print(len(slice_data))
+print(len(slice_label))
